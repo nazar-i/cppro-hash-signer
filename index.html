@@ -16,9 +16,9 @@
 			<br><br>
 			<label for="messageHashJson">Подписываемый хэш (список json): *</label>
 			<br>
-			<textarea id="messageHashJson" placeholder="Введите список json-хэшей" autofocus required></textarea>
+			<textarea disabled id="messageHashJson" placeholder="Введите список json-хэшей" autofocus required></textarea>
 			<br><br>
-			<!--[if gte IE 10]><!--> <label for="messageFile">Или файл для подписи:</label> <br> <input id="messageFile"
+			<!--[if gte IE 10]><!--> <label for="messageFile">Или файл для подписи:</label> <br> <input disabled id="messageFile"
 				type="file">
 			<pre id="messageFileError"></pre>
 			<hr> <label for="certificate">Сертификат: *</label> <br> <select id="certificate" tabindex="-1" required>
@@ -28,23 +28,23 @@
 				<summary>Информация о сертификате</summary>
 				<pre id="certificateInfo"></pre>
 			</details>
-			<pre id="certificateInfoError"></pre> <label>Тип подписи: *</label> <br> <label><input type="radio"
-					name="signatureType" value="attached">Совмещенная</label> <br> <label><input type="radio"
-					name="signatureType" value="xml">XML</label> <br> <label><input type="radio" name="signatureType"
-					value="detached" checked>Отделенная</label> <br><br>
-			<hr> <button id="createSignature" type="submit" disabled>Создать подпись</button>
+			<pre id="certificateInfoError"></pre> 
+			<label>Тип подписи: *</label> 
+			<br> 
+			<!-- <label><input type="radio" name="signatureType" value="attached">Совмещенная</label> <br> -->
+			<!-- <label><input type="radio"name="signatureType" value="xml">XML</label> <br>  -->
+			<label><input type="radio" name="signatureType" value="detached" checked>Отделенная</label> <br>
+			<br>
+			<hr> <button id="createSignature" type="submit">Создать подпись</button>
 		</fieldset>
 		<fieldset>
 			<legend>Результат</legend> <label for="hash">Хеш (ГОСТ Р 34.11-2012 256 бит):</label><br> <textarea
 				id="hash" cols="80" rows="5" placeholder="Не вычислен"></textarea> <br>
-			<pre id="hashError"></pre> <label for="signature">Подпись (PKCS7):</label><br> <textarea id="signature"
-				cols="80" rows="30" placeholder="Не создана"></textarea>
-			<label for="signatureJson">Подпись (PKCS7):</label><br> <textarea id="signatureJson"
+			<!-- <pre id="hashError"></pre> <label for="signature">Подпись (CAdES T):</label><br> <textarea id="signature"
+				cols="80" rows="30" placeholder="Не создана"></textarea> -->
+			<label for="signatureJson">Подпись (CAdES T):</label><br> <textarea id="signatureJson"
 				placeholder="Не создана"></textarea>
 			<pre id="signatureError"></pre>
-			<p> Для <a href="https://www.gosuslugi.ru/pgu/eds/" target="_blank" rel="nofollow noopener noreferrer"
-					title="Перейти к проверке подписи">проверки</a> нужно создать файл со сгенерированной подписью в
-				кодировке UTF-8 с расширением *.sgn <br> для отделенной подписи (или *.sig для совмещенной). </p>
 		</fieldset>
 		<fieldset>
 			<legend>Информация о системе</legend>
