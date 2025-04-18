@@ -14,11 +14,11 @@
 			<br>
 			<textarea id="messageHash" cols="80" rows="5" placeholder="Введите хэш" autofocus required></textarea>
 			<br><br>
-			<label for="messageHashJson">Подписываемый хэш (список json): *</label>
+			<label hidden for="messageHashJson">Подписываемый хэш (список json): *</label>
 			<br>
-			<textarea disabled id="messageHashJson" placeholder="Введите список json-хэшей" autofocus required></textarea>
+			<textarea hidden disabled id="messageHashJson" placeholder="Введите список json-хэшей" autofocus required></textarea>
 			<br><br>
-			<!--[if gte IE 10]><!--> <label for="messageFile">Или файл для подписи:</label> <br> <input disabled id="messageFile"
+			<!--[if gte IE 10]><!--> <label hidden for="messageFile">Или файл для подписи:</label> <br> <input hidden disabled id="messageFile"
 				type="file">
 			<pre id="messageFileError"></pre>
 			<hr> <label for="certificate">Сертификат: *</label> <br> <select id="certificate" tabindex="-1" required>
@@ -40,9 +40,10 @@
 		<fieldset>
 			<legend>Результат</legend> <label for="hash">Хеш (ГОСТ Р 34.11-2012 256 бит):</label><br> <textarea
 				id="hash" cols="80" rows="5" placeholder="Не вычислен"></textarea> <br>
-			<!-- <pre id="hashError"></pre> <label for="signature">Подпись (CAdES T):</label><br> <textarea id="signature"
-				cols="80" rows="30" placeholder="Не создана"></textarea> -->
-			<label for="signatureJson">Подпись (CAdES T):</label><br> <textarea id="signatureJson"
+			 <pre id="hashError"></pre> 
+			 <label for="signature">Подпись (CAdES T):</label><br> <textarea id="signature"
+				cols="80" rows="30" placeholder="Не создана"></textarea> 
+			<label hidden for="signatureJson">Подпись (CAdES T):</label><br> <textarea hidden id="signatureJson"
 				placeholder="Не создана"></textarea>
 			<pre id="signatureError"></pre>
 		</fieldset>
